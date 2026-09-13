@@ -4,7 +4,6 @@
  * de veces que aparece cada palabra en un arreglo
 **/
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -30,6 +29,7 @@ Palabra* creaPalabra(char* word){
     return new;
 }
 
+
 int main() {
     HashMap *map = createMap(100);
     char words[57][15]={"Alice","was","beginning","to","get","very","tired",
@@ -41,7 +41,7 @@ int main() {
     int i;
     for(i=0;i<57;i++){
         Pair* aux=searchMap(map,words[i]); //clave: palabra, valor: int*
-        
+
         if(aux!=NULL){
             (*(int*)aux->value)++;
         }else{
